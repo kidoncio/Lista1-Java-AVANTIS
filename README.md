@@ -33,15 +33,15 @@ public class AppTicTacToe {
       char jogador1 = 'X';
       char jogador2 = '0';
       char [][] tabuleiro = new char[3][3];
-      tabuleiro[0][0] = 'X';
-      tabuleiro[0][1] = '0';
-      tabuleiro[0][1] = 'X';
-      tabuleiro[1][0] = '0';
-      tabuleiro[1][1] = '0';
-      tabuleiro[1][2] = 'X';
-      tabuleiro[2][0] = 'X';
-      tabuleiro[2][1] = '0';
-      tabuleiro[2][2] = 'X';
+      	tabuleiro[0][0] = 'X';
+	      tabuleiro[0][1] = '0';
+	      tabuleiro[0][1] = 'X';
+	      tabuleiro[1][0] = '0';
+	      tabuleiro[1][1] = '0';
+	      tabuleiro[1][2] = 'X';
+	      tabuleiro[2][0] = 'X';
+	      tabuleiro[2][1] = '0';
+	      tabuleiro[2][2] = 'X';
       }
 }
 
