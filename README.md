@@ -12,6 +12,7 @@ www.avantis.edu.br
 LISTA DE EXERCÍCIOS 1
 
 JAVA BÁSICO Observações:
+
 •A linguagem convencionada para o desenvolvimento desta atividade é Java.
 •Os  arquivos  com  código  fonte  (arquivos  com  extensão  .java)  deverão  ser  compactados  e enviados  na  atividade 
 corresponde  aberta  no Edmodo. Não  serão  considerados  trabalhos entregue fora do prazo ou enviado por outros meios.
