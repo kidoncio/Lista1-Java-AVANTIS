@@ -14,17 +14,21 @@ public class questao10 {
 		  
 		  System.out.println("Digite um número inteiro:");
 		  numero = sc.nextInt();
-		  
-		  System.out.println("Você digitou: "+numero);
-		  if(numero%2==0){
-			  System.out.println("Esse número é par.");
-		  }
-		  else if(numero==0){
-			  System.out.println("Esse número é zero.");
+		  if(numero < 0){
+			  System.out.println("Digite um valor maior do que zero.");
 		  }
 		  else{
-			  System.out.println("Esse número é ímpar.");
-		  }
-		  
+			  System.out.println("Você digitou: "+numero);
+			  if(numero%2==0){
+				  System.out.println("Esse número é par.");
+			  }
+			  else if(numero==0){
+				  System.out.println("Esse número é zero.");
+			  }
+			  else{
+				  System.out.println("Esse número é ímpar.");
+			  }
+			  
+		  } 
 	  }
 }
