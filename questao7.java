@@ -14,6 +14,7 @@ deve de estar em conformidade com o CLT.
 */
 
 
+
 import java.util.Scanner;
 
 public class questao7 {
@@ -62,23 +63,21 @@ public class questao7 {
 						periodoFerias = sc.nextInt();
 
 						ferias = ferias - feriasVendidas;
-						
+
 						abonoConstitucional = salario / 3;
 						abonoPecuniario = salario / 30;
 						valorFeriasVendidas = feriasVendidas * abonoPecuniario;
 						total = valorFeriasVendidas + salario + abonoConstitucional;
-						
-				
+
 						System.out.println(
 								"\nO usuário possui " + tempoTrabalho + " meses registrado nessa organização.");
 						System.out.println("O usuário decidiu vender " + feriasVendidas + " dias de suas férias.");
-						System.out
-								.println("Pela venda das férias, o usuário irá receber R$ " + valorFeriasVendidas);
+						System.out.println("Pela venda das férias, o usuário irá receber R$ " + valorFeriasVendidas);
 						System.out.println(
 								"Quando o usuário completar 12 meses registrado nessa organização, ele terá direito a "
 										+ ferias + " dias de férias.");
-						System.out.println(
-								"O  primeiro período de férias terá um total de: " + periodoFerias + " dias.");
+						System.out
+								.println("O  primeiro período de férias terá um total de: " + periodoFerias + " dias.");
 						ferias = ferias - periodoFerias;
 						System.out.println("O segundo período de férias terá um total de: " + ferias + " dias.");
 						System.out.println("Ao todo, o usuário irá receber R$ " + total);
@@ -88,36 +87,35 @@ public class questao7 {
 					System.out.println("Por favor, reinicie o programa com os valores corretos.");
 				}
 			}
-			// CASO O USUÁRIO QUE POSSUA MENOS DO QUE 12 MESES DE TRABALHO NÃO QUEIRA VENDER AS SUAS FÉRIAS.
-			else{
+			// CASO O USUÁRIO QUE POSSUA MENOS DO QUE 12 MESES DE TRABALHO NÃO
+			// QUEIRA VENDER AS SUAS FÉRIAS.
+			else {
 				System.out.println("O usuário gostaria de dividir suas férias em dois períodos? (S ou N)");
 				opcao = sc.next().charAt(0);
 
 				if (opcao == 's' || opcao == 'S') {
 					System.out.print("Digite a quantidade de dias que o primeiro período de férias terá: ");
 					periodoFerias = sc.nextInt();
-					
+
 					ferias = ferias - periodoFerias;
-					
-					System.out.println(
-							"\nO usuário possui " + tempoTrabalho + " meses registrado nessa organização.");
+
+					System.out.println("\nO usuário possui " + tempoTrabalho + " meses registrado nessa organização.");
 					System.out.println("O usuário possui direito a " + ferias + " dias de férias.");
-					System.out
-							.println("O  primeiro período de férias terá um total de: " + periodoFerias + " dias.");
+					System.out.println("O  primeiro período de férias terá um total de: " + periodoFerias + " dias.");
 
 					System.out.println("O segundo período de férias terá um total de: " + ferias + " dias.");
 
 				}
-				// CASO O USUÁRIO QUE TENHA MENOS DE 12 MESES DE REGISTRO QUE NÃO QUEIRA VENDER AS SUAS FÉRIAS,
+				// CASO O USUÁRIO QUE TENHA MENOS DE 12 MESES DE REGISTRO QUE
+				// NÃO QUEIRA VENDER AS SUAS FÉRIAS,
 				// TAMBÉM NÃO QUEIRA DIVIDIR AS FÉRIAS EM DOIS PERÍODOS.
-				else{
-					
-					System.out.println(
-							"\nO usuário possui " + tempoTrabalho + " meses registrado nessa organização.");
+				else {
+
+					System.out.println("\nO usuário possui " + tempoTrabalho + " meses registrado nessa organização.");
 					System.out.println(
 							"Quando o usuário completar 12 meses registrado nessa organização, ele terá direito a "
 									+ ferias + " dias de férias.");
-					
+
 				}
 			}
 
@@ -126,13 +124,12 @@ public class questao7 {
 
 		// --------------------------- INICIO TEMPO DE TRABALHO == 12
 		if (tempoTrabalho == 12) {
-			System.out.println("\nO usuário completou 12 meses estando registrado na mesma organização.");
-
 			System.out
 					.print("Digite o tempo de trabalho que o empregado possui desde o vencimento das últimas férias: ");
 			vencimentoFerias = sc.nextInt();
 
-			// CASO O EMPREGADO POSSUA MAIS DE 12 MESES DESDE O VENCIMENTO DAS ÚLTIMAS FÉRIAS.
+			// CASO O EMPREGADO POSSUA MAIS DE 12 MESES DESDE O VENCIMENTO DAS
+			// ÚLTIMAS FÉRIAS.
 			if (vencimentoFerias >= 12) {
 				System.out.println("O usuário gostaria de vender parte de suas férias? (S ou N)");
 				opcao = sc.next().charAt(0);
@@ -168,14 +165,14 @@ public class questao7 {
 							System.out.println("O segundo período de férias terá um total de: " + ferias + " dias.");
 							System.out.println("Ao todo, o usuário irá receber R$ " + total);
 						}
-					}
-					else {
+					} else {
 						System.out.println("Só é possível vender até no máximo 10 dias de suas férias.");
 						System.out.println("Por favor, reinicie o programa com os valores corretos.");
 					}
 				}
 
-				// CASO O USUÁRIO QUE POSSUI 12 MESES DESDE O VENCIMENTO DAS ÚLTIMAS FÉRIAS NÃO QUEIRA VENDER AS SUAS FÉRIAS.
+				// CASO O USUÁRIO QUE POSSUI 12 MESES DESDE O VENCIMENTO DAS
+				// ÚLTIMAS FÉRIAS NÃO QUEIRA VENDER AS SUAS FÉRIAS.
 				else {
 					abonoConstitucional = salario / 3;
 					total = abonoConstitucional + salario;
@@ -186,9 +183,9 @@ public class questao7 {
 					if (opcao == 's' || opcao == 'S') {
 						System.out.print("Digite a quantidade de dias que o primeiro período de férias terá: ");
 						periodoFerias = sc.nextInt();
-						
+
 						ferias = ferias - periodoFerias;
-						
+
 						System.out.println(
 								"\nO usuário possui " + tempoTrabalho + " meses registrado nessa organização.");
 						System.out.println("O usuário possui direito a " + ferias + " dias de férias.");
@@ -199,32 +196,33 @@ public class questao7 {
 						System.out.println("Ao todo, o usuário irá receber R$ " + total);
 
 					}
-					// CASO O USUÁRIO QUE POSSUI 12 MESES DESDE O VENCIMENTO DAS ÚLTIMAS FÉRIAS NÃO QUEIRA VENDER AS SUAS FÉRIAS,
+					// CASO O USUÁRIO QUE POSSUI 12 MESES DESDE O VENCIMENTO DAS
+					// ÚLTIMAS FÉRIAS NÃO QUEIRA VENDER AS SUAS FÉRIAS,
 					// TAMBÉM NÃO QUEIRA DIVIDIR AS FÉRIAS EM DOIS PERÍODOS.
-					else{
-						
+					else {
+
 						System.out.println(
 								"\nO usuário possui " + tempoTrabalho + " meses registrado nessa organização.");
 						System.out.println("O usuário possui direito a " + ferias + " dias de férias.");
 						System.out.println("Ao todo, o usuário irá receber R$ " + total);
-						
+
 					}
 				}
 
 			}
-			// CASO O USUÁRIO TENHA MENOS DE 12 MESES DESDE O VENCIMENTO DAS ÚLTIMAS FÉRIAS
+			// CASO O USUÁRIO TENHA MENOS DE 12 MESES DESDE O VENCIMENTO DAS
+			// ÚLTIMAS FÉRIAS
 			else {
 				System.out.println("Quanto tempo de trabalho o usuário possui desde o vencimento das últimas férias?");
 				vencimentoFerias = sc.nextFloat();
-				
+
 				System.out.println("O usuário gostaria de vender parte de suas férias? (S ou N)");
 				opcao = sc.next().charAt(0);
-				
+
 				if (opcao == 's' || opcao == 'S') {
 					System.out.println("Quantos dias de suas férias o usuário quer vender?");
 					feriasVendidas = sc.nextInt();
 
-					
 					abonoPecuniario = salario / 30;
 					abonoConstitucional = abonoPecuniario * vencimentoFerias;
 					valorFeriasVendidas = feriasVendidas * abonoPecuniario;
@@ -252,15 +250,15 @@ public class questao7 {
 							System.out.println("O segundo período de férias terá um total de: " + ferias + " dias.");
 							System.out.println("Ao todo, o usuário irá receber R$ " + total);
 						}
-					}
-					else {
+					} else {
 						System.out.println("Só é possível vender até no máximo 10 dias de suas férias.");
 						System.out.println("Por favor, reinicie o programa com os valores corretos.");
 					}
 				}
-				
-				// CASO O USUÁRIO QUE TENHA MENOS DE 12 MESES DESDE O VENCIMENTO DAS ÚLTIMAS FÉRIAS NÃO QUEIRA VENDER AS SUAS FÉRIAS.
-				else{
+
+				// CASO O USUÁRIO QUE TENHA MENOS DE 12 MESES DESDE O VENCIMENTO
+				// DAS ÚLTIMAS FÉRIAS NÃO QUEIRA VENDER AS SUAS FÉRIAS.
+				else {
 					abonoPecuniario = salario / 30;
 					abonoConstitucional = abonoPecuniario * vencimentoFerias;
 					total = abonoConstitucional + salario;
@@ -271,9 +269,9 @@ public class questao7 {
 					if (opcao == 's' || opcao == 'S') {
 						System.out.print("Digite a quantidade de dias que o primeiro período de férias terá: ");
 						periodoFerias = sc.nextInt();
-						
+
 						ferias = ferias - periodoFerias;
-						
+
 						System.out.println(
 								"\nO usuário possui " + tempoTrabalho + " meses registrado nessa organização.");
 						System.out.println("O usuário possui direito a " + ferias + " dias de férias.");
@@ -284,15 +282,17 @@ public class questao7 {
 						System.out.println("Ao todo, o usuário irá receber R$ " + total);
 
 					}
-					// CASO O USUÁRIO QUE TENHA MENOS DE 12 MESES DESDE O VENCIMENTO DAS ÚLTIMAS FÉRIAS NÃO QUEIRA VENDER AS SUAS FÉRIAS,
+					// CASO O USUÁRIO QUE TENHA MENOS DE 12 MESES DESDE O
+					// VENCIMENTO DAS ÚLTIMAS FÉRIAS NÃO QUEIRA VENDER AS SUAS
+					// FÉRIAS,
 					// TAMBÉM NÃO QUEIRA DIVIDIR AS FÉRIAS EM DOIS PERÍODOS.
-					else{
-						
+					else {
+
 						System.out.println(
 								"\nO usuário possui " + tempoTrabalho + " meses registrado nessa organização.");
 						System.out.println("O usuário possui direito a " + ferias + " dias de férias.");
 						System.out.println("Ao todo, o usuário irá receber R$ " + total);
-						
+
 					}
 				}
 			}
