@@ -1,5 +1,3 @@
-package lista1;
-
 /* Escreva um programa que solicite e armazene em variáveis o seu nome, data de nascimento,
 endereço e seu número de telefone. Na sequência exiba o conteúdo destas variáveis na tela, e
 calcule e apresente também a sua idade. Espera-se que os dados sejam armazenados em
