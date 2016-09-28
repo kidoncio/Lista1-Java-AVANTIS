@@ -78,13 +78,13 @@ public class questao8 {
 
 		System.out.println(
 				"Precisamos saber as dimensões da caixa do seu produto para determinar qual a melhor opção para você.");
-		System.out.print("Digite a altura da caixa do seu produto (em m): ");
+		System.out.print("Digite a altura do pallet do seu produto (em m): ");
 		altura = sc.nextFloat();
-		System.out.print("Digite a largura da caixa do seu produto (em m): ");
+		System.out.print("Digite a largura do pallet do seu produto (em m): ");
 		largura = sc.nextFloat();
-		System.out.print("Digite o comprimento da caixa do seu produto (em m): ");
+		System.out.print("Digite o comprimento do pallet do seu produto (em m): ");
 		comprimento = sc.nextFloat();
-		System.out.print("Digite o peso da caixa do seu produto (em kg): ");
+		System.out.print("Digite o peso do pallet do seu produto (em kg): ");
 		pesoProduto = sc.nextFloat();
 
 		metroCubicoProduto = altura * comprimento * largura;
