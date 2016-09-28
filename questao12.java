@@ -18,15 +18,15 @@ public class questao12 {
 		  System.out.println("Nota 2: PESO 3.");
 		  System.out.println("Nota 3: PESO 5.");
 		  		  
-		  System.out.println("\nDigite a 1ª nota do aluno: ");
+		  System.out.print("\nDigite a 1ª nota do aluno: ");
 		  nota1 = sc.nextFloat();
 		  nota1 = nota1*2;  
 		  
-		  System.out.println("\nDigite a 2ª nota do aluno: ");
+		  System.out.print("\nDigite a 2ª nota do aluno: ");
 		  nota2 = sc.nextFloat();
 		  nota2 = nota2*3;
 		  
-		  System.out.println("\nDigite a 3ª nota do aluno:");
+		  System.out.print("\nDigite a 3ª nota do aluno:");
 		  nota3 = sc.nextFloat();
 		  nota3 = nota3*5;
 		  
