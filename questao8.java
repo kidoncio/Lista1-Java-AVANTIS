@@ -124,9 +124,9 @@ public class questao8 {
 			pesoTotal40 = (int) (pesoProduto * capacidadeCargaDry40);
 
 			if ((pesoTotal20 <= capacidadePesoDry20) || (pesoTotal40 <= capacidadePesoDry40)) {
-				System.out.println("\nNo container Dry 20, é possível armazenar " + capacidadeCargaDry20 + " produtos");
-				System.out.println("No container Dry 40, é possível armazenar " + capacidadeCargaDry40 + " produtos");
-				System.out.println("\nPara o seu produto nós recomendamos a utilização do Container dry 40.");
+				System.out.println("\nNo container Dry 20, é possível armazenar " + capacidadeCargaDry20 + " pallets");
+				System.out.println("No container Dry 40, é possível armazenar " + capacidadeCargaDry40 + " pallets");
+				System.out.println("\nPara o seu produto, nós recomendamos a utilização do Container dry 40.");
 				System.out.println(
 						"Ao utilizar o Dry 40, o peso total dos seus produtos será de: " + pesoTotal40 + " kg.");
 			}
