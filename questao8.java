@@ -109,32 +109,33 @@ public class questao8 {
 		capacidadePesoDry40 = 28800;
 		metroCubicoDry40 = (altura * comprimento * largura);
 
-
 		if ((pesoProduto > capacidadePesoDry20) || (pesoProduto > capacidadePesoDry40)
 				|| (metroCubicoProduto > metroCubicoDry20) || (metroCubicoProduto > metroCubicoDry40)) {
 			System.out.println("\nAs dimensões do produto excedem as dimensões suportadas pelos containers.");
 		}
 
 		else {
-			
+
 			// CALCULO PARA SABER QUANTOS PRODUTOS CABEM NO CONTAINER
 			capacidadeCargaDry20 = (int) (metroCubicoDry20 / metroCubicoProduto);
 			capacidadeCargaDry40 = (int) (metroCubicoDry40 / metroCubicoProduto);
 
 			pesoTotal20 = (int) (pesoProduto * capacidadeCargaDry20);
 			pesoTotal40 = (int) (pesoProduto * capacidadeCargaDry40);
-			
+
 			if ((pesoTotal20 <= capacidadePesoDry20) || (pesoTotal40 <= capacidadePesoDry40)) {
 				System.out.println("\nNo container Dry 20, é possível armazenar " + capacidadeCargaDry20 + " produtos");
 				System.out.println("No container Dry 40, é possível armazenar " + capacidadeCargaDry40 + " produtos");
 				System.out.println("\nPara o seu produto nós recomendamos a utilização do Container dry 40.");
-				System.out.println("Ao utilizar o Dry 40, o peso total dos seus produtos será de: "+ pesoTotal40 +" kg.");
+				System.out.println(
+						"Ao utilizar o Dry 40, o peso total dos seus produtos será de: " + pesoTotal40 + " kg.");
 			}
 
 			else if ((pesoTotal40 > capacidadePesoDry40) && (pesoTotal20 < capacidadePesoDry20)) {
 				System.out.println(
 						"\n\nDevido ao peso do seu produto, é mais recomendável que você utilize o container Dry 20 pés Standard.");
-				System.out.println("Ao utilizar o Dry 20, o peso total dos seus produtos será de: "+ pesoTotal20 +" kg.");
+				System.out.println(
+						"Ao utilizar o Dry 20, o peso total dos seus produtos será de: " + pesoTotal20 + " kg.");
 			}
 		}
 	}
