@@ -1,5 +1,3 @@
-package lista1;
-
 /* O transporte internacional de longo percurso está sendo utilizado com frequência, devido ao
 aumento das exportações. Ele pode tanto ser por meio rodoviário, como por marítimo,
 ferroviário ou aéreo. As exportações para outros continentes, na sua maioria são feitas por
@@ -69,17 +67,20 @@ public class questao8 {
 		System.out.println(
 				"Como padrão, nós possuímos os containers: dry de 20 pés stardard e dry de 40 pés stardard. \n\n");
 
-		float dry20, dry40, comprimento, largura, altura, capacidadeCargaDry20, capacidadeCargaDry40, pesoProduto,
-				metroCubicoProduto, metroCubicoDry20, metroCubicoDry40;
+		float comprimento = 0, largura = 0, altura = 0, metroCubicoProduto = 0, metroCubicoDry20 = 0,
+				metroCubicoDry40 = 0, pesoProduto = 0;
+		int capacidadeCargaDry20 = 0, capacidadeCargaDry40 = 0, capacidadePesoDry20 = 0, capacidadePesoDry40 = 0,
+				pesoTotal20, pesoTotal40;
+
 		Scanner sc = new Scanner(System.in);
 
 		System.out.println(
 				"Precisamos saber as dimensões da caixa do seu produto para determinar qual a melhor opção para você.");
-		System.out.print("Digite a altura da caixa do seu produto (em cm): ");
+		System.out.print("Digite a altura da caixa do seu produto (em m): ");
 		altura = sc.nextFloat();
-		System.out.print("Digite a largura da caixa do seu produto (em cm): ");
+		System.out.print("Digite a largura da caixa do seu produto (em m): ");
 		largura = sc.nextFloat();
-		System.out.print("Digite o comprimento da caixa do seu produto (em cm): ");
+		System.out.print("Digite o comprimento da caixa do seu produto (em m): ");
 		comprimento = sc.nextFloat();
 		System.out.print("Digite o peso da caixa do seu produto (em kg): ");
 		pesoProduto = sc.nextFloat();
@@ -87,27 +88,55 @@ public class questao8 {
 		metroCubicoProduto = altura * comprimento * largura;
 
 		// CALCULO DAS DIMENSÕES DRY 20 STANDARD
-		comprimento = 6058;
-		largura = 2438;
-		altura = 2591;
-		capacidadeCargaDry20 = 21780;
-		metroCubicoDry20 = altura * comprimento * largura;
+		comprimento = 0;
+		largura = 0;
+		altura = 0;
+		comprimento = (float) 6.058;
+		largura = (float) 2.438;
+		altura = (float) 2.591;
+		capacidadePesoDry20 = (int) 21.780;
+		metroCubicoDry20 = (altura * comprimento * largura);
 
 		// CALCULO DAS DIMENSÕES DRY 40 STANDARD
-		comprimento = 12035;
-		largura = 2350;
-		altura = 2690;
-		capacidadeCargaDry40 = 28800;
-		metroCubicoDry40 = altura * comprimento * largura;
+		comprimento = 0;
+		largura = 0;
+		altura = 0;
+		comprimento = (float) 12.035;
+		largura = (float) 2.350;
+		altura = (float) 2.690;
+		capacidadePesoDry40 = (int) 28.800;
+		metroCubicoDry40 = (altura * comprimento * largura);
 
-		if ((pesoProduto > capacidadeCargaDry20) || (pesoProduto > capacidadeCargaDry40)
+
+		if ((pesoProduto > capacidadePesoDry20) || (pesoProduto > capacidadePesoDry40)
 				|| (metroCubicoProduto > metroCubicoDry20) || (metroCubicoProduto > metroCubicoDry40)) {
-			System.out.println("As dimensões do produto excedem as dimensões suportadas pelos containers.");
+			System.out.println("\nAs dimensões do produto excedem as dimensões suportadas pelos containers.");
 		}
 
 		else {
+			
+			// CALCULO PARA SABER QUANTOS PRODUTOS CABEM NO CONTAINER
+			capacidadeCargaDry20 = (int) (metroCubicoDry20 / metroCubicoProduto);
+			capacidadeCargaDry40 = (int) (metroCubicoDry40 / metroCubicoProduto);
+			capacidadePesoDry20 = (int) (capacidadePesoDry20 / pesoProduto);
+			capacidadePesoDry40 = (int) (capacidadePesoDry40 / pesoProduto);
 
+			pesoTotal20 = (int) (pesoProduto * capacidadeCargaDry20);
+			pesoTotal40 = (int) (pesoProduto * capacidadeCargaDry40);
+			
+			if ((pesoTotal20 > capacidadePesoDry20) || (pesoTotal40 > capacidadePesoDry40)) {
+				System.out.println("\nNo container Dry 20, é possível armazenar " + capacidadeCargaDry20 + " produtos");
+				System.out.println("No container Dry 40, é possível armazenar " + capacidadeCargaDry40 + " produtos");
+				System.out.println("\nPara o seu produto nós recomendamos a utilização do Container dry 40.");
+				System.out.println("Ao utilizar o Dry 40, o peso total dos seus produtos será de: "+pesoTotal40);
+			}
+
+			else if ((pesoTotal40 > capacidadePesoDry40) && (pesoTotal20 < capacidadePesoDry20)) {
+				System.out.println(
+						"\n\nDevido ao peso do seu produto, é mais recomendável que você utilize o container Dry 20 pés Standard.");
+				System.out.println("Ao utilizar o Dry 20, o peso total dos seus produtos será de: "+pesoTotal20);
+			}
 		}
-
 	}
+
 }
