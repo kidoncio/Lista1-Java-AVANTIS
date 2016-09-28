@@ -2,8 +2,6 @@
 smo, calcule o valor de venda e apresente na tela os dados detalhados.
 */
 
-package lista1;
-
 import java.util.Scanner;
 
 public class questao4 {
