@@ -24,11 +24,11 @@ public class questao1 {
 		int mes;
     int ano;
 		dataAtual.set(2016,9,27);
-		System.out.print("Entre com o dia em que você nasceu: ");
+		System.out.print("Digite o dia em que você nasceu (DD): ");
 		dia=sc.nextInt();
-		System.out.print("Entre com o mês em que você nasceu: ");
+		System.out.print("Digite o mês em que você nasceu (MM): ");
 		mes=sc.nextInt();
-		System.out.println("Entre com o ano em que você nasceu: ");
+		System.out.print("Digite o ano em que você nasceu (YYYY): ");
 		ano=sc.nextInt();
 		dataNasc.set(ano, mes, dia);
 		int idade=dataAtual.get(Calendar.YEAR)- dataNasc.get(Calendar.YEAR);
@@ -39,7 +39,7 @@ public class questao1 {
 		numeroDeTelefone= sc.nextInt();
 		
 		String endereco;
-		System.out.println("entre com seu endereço");
+		System.out.print("Digite o seu endereço:");
 		endereco=sc.next();
 		System.out.println("Sr(a)  " + nome + ", a sua idade é  " + idade + "; o seu endereco é " + endereco            + "; o seu numero de telefone é  "+ numeroDeTelefone++);
 	}
