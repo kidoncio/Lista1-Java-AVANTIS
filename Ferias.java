@@ -3,7 +3,7 @@ public class Ferias {
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
 		float ferias=30,feriasVencidas,periodo1=0,periodo2=0,abono=0,dias=0;
-		 int  teste=0;
+		int  teste=0;
 		
 			/* confere se o funcionario possui ferias vencidas ou nao**/
 			System.out.println("o funcionario possui ferias vencidas ? 1 para sim 2 para nao ");
@@ -71,6 +71,8 @@ public class Ferias {
 			/*imprime o valor de salario e ferias totais do funcionario**/
 			System.out.println(" seu funcionario tem direito a " + " "+ ferias +" "+"dias"+ " "+ "e recebera "+ " "+salario);
 			if(periodo1>0 || periodo2>0){
+				periodo1=ferias-periodo1;
+				periodo2=ferias-periodo2;
 				System.out.println("sendo que primeiro ira retirar "+ " "+periodo1+ " " + "dias"+ " e depois mais "+periodo2 );
 			}
 		}
