@@ -297,7 +297,7 @@ public class questao7 {
 				}
 			}
 		}
-		// --------------------------- FIM TEMPO DE TRABALHO == 12
+		// --------------------------- FIM TEMPO DE TRABALHO >= 12
 
 	}
 }
