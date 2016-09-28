@@ -66,13 +66,15 @@ public class questao8 {
 
 		System.out.println("Esse programa irá definir qual a melhor opção de container para a sua carga!");
 
-		System.out
-				.println("Como padrão, nós possuímos os containers: dry de 20 pés stardard e dry de 40 pés stardard. \n\n");
+		System.out.println(
+				"Como padrão, nós possuímos os containers: dry de 20 pés stardard e dry de 40 pés stardard. \n\n");
 
-		float dry20, dry40, comprimento, largura, altura, capacidadeCargaDry20, capacidadeCargaDry40, peso, metroCubicoProduto, metroCubicoDry20, metroCubicoDry40;
+		float dry20, dry40, comprimento, largura, altura, capacidadeCargaDry20, capacidadeCargaDry40, pesoProduto,
+				metroCubicoProduto, metroCubicoDry20, metroCubicoDry40;
 		Scanner sc = new Scanner(System.in);
-		
-		System.out.println("Precisamos saber as dimensões da caixa do seu produto para determinar qual a melhor opção para você.");
+
+		System.out.println(
+				"Precisamos saber as dimensões da caixa do seu produto para determinar qual a melhor opção para você.");
 		System.out.print("Digite a altura da caixa do seu produto (em cm): ");
 		altura = sc.nextFloat();
 		System.out.print("Digite a largura da caixa do seu produto (em cm): ");
@@ -80,25 +82,32 @@ public class questao8 {
 		System.out.print("Digite o comprimento da caixa do seu produto (em cm): ");
 		comprimento = sc.nextFloat();
 		System.out.print("Digite o peso da caixa do seu produto (em kg): ");
-		peso = sc.nextFloat();
-		
+		pesoProduto = sc.nextFloat();
+
 		metroCubicoProduto = altura * comprimento * largura;
-		
-		//CALCULO DAS DIMENSÕES DRY 20 STANDARD
+
+		// CALCULO DAS DIMENSÕES DRY 20 STANDARD
 		comprimento = 6058;
 		largura = 2438;
 		altura = 2591;
 		capacidadeCargaDry20 = 21780;
 		metroCubicoDry20 = altura * comprimento * largura;
-		
-		//CALCULO DAS DIMENSÕES DRY 40 STANDARD
+
+		// CALCULO DAS DIMENSÕES DRY 40 STANDARD
 		comprimento = 12035;
 		largura = 2350;
 		altura = 2690;
 		capacidadeCargaDry40 = 28800;
 		metroCubicoDry40 = altura * comprimento * largura;
-		
-		
-		
+
+		if ((pesoProduto > capacidadeCargaDry20) || (pesoProduto > capacidadeCargaDry40)
+				|| (metroCubicoProduto > metroCubicoDry20) || (metroCubicoProduto > metroCubicoDry40)) {
+			System.out.println("As dimensões do produto excedem as dimensões suportadas pelos containers.");
+		}
+
+		else {
+
+		}
+
 	}
 }
