@@ -122,8 +122,8 @@ public class questao7 {
 		}
 		// --------------------------- FIM TEMPO DE TRABALHO < 12
 
-		// --------------------------- INICIO TEMPO DE TRABALHO == 12
-		if (tempoTrabalho == 12) {
+		// --------------------------- INICIO TEMPO DE TRABALHO >= 12
+		if (tempoTrabalho >= 12) {
 			System.out
 					.print("Digite o tempo de trabalho que o empregado possui desde o vencimento das últimas férias: ");
 			vencimentoFerias = sc.nextInt();
